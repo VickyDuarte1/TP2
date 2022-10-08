@@ -1,3 +1,5 @@
+const { lstat } = require("fs")
+
 /* 
   Importante: 
   No modificar ni el nombre ni los argumetos que reciben las funciones, sólo deben escribir
@@ -12,7 +14,9 @@ function stringMasLarga(strings) {
   // stringMasLarga(['JavaScript', 'HTML', 'CSS']); debe retornar 'JavaScript'
 
   // Tu código aca
+  return strings.reduce((max,actual)=> actual.length > max.length ? actual: max);
 }
+
 
 // No modifiques nada debajo de esta linea //
 
